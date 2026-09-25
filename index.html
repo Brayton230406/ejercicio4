@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Simulador interactivo de un servicio asíncrono con datos de ejemplo."
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'"
+    />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="theme-color" content="#173f33" />
+    <title>Servicio asíncrono · Laboratorio web</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">LABORATORIO WEB / 04</p>
+        <h1>
+          Una solicitud.<br />Una respuesta.<br /><span>Así de asíncrono.</span>
+        </h1>
+        <p class="description">
+          Descubre qué ocurre mientras un servicio prepara tus datos. Haz una
+          solicitud y sigue su resultado.
+        </p>
+        <p class="note">Datos de ejemplo · Sin servicios externos</p>
+      </header>
+      <section class="card" aria-labelledby="panel-title">
+        <p class="eyebrow">DEMO INTERACTIVA</p>
+        <h2 id="panel-title">Consulta de usuario</h2>
+        <p class="hint">
+          El servicio tarda unos instantes y puede simular un fallo. Siempre
+          puedes volver a intentarlo.
+        </p>
+        <label for="escenario">Tipo de respuesta</label>
+        <select id="escenario">
+          <option value="aleatorio">Aleatoria (70 % de éxito)</option>
+          <option value="exito">Simular éxito</option>
+          <option value="error">Simular error</option>
+        </select>
+        <button id="btnCargar" type="button">Cargar datos del usuario ↗</button>
+        <div class="response" id="respuesta" data-state="idle">
+          <p class="eyebrow">RESPUESTA DEL SERVICIO</p>
+          <p id="resultado" role="status" aria-live="polite" aria-atomic="true">
+            Todo listo. Presiona el botón para empezar.
+          </p>
+        </div>
+        <p class="note">
+          Una simulación de 800 ms. Ningún dato personal se envía ni se guarda.
+        </p>
+      </section>
+      <footer>JavaScript · Promesas · async / await</footer>
+      <noscript
+        >Activa JavaScript en tu navegador para utilizar el simulador.</noscript
+      >
+    </main>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "ejercicio4-servicio-asincrono",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node tools/server.cjs",
+    "check": "node --check script.js && eslint . && prettier --check .",
+    "format": "prettier --write .",
+    "test": "playwright test",
+    "build": "node tools/build.cjs"
+  },
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.63.0",
+    "eslint": "10.11.0",
+    "prettier": "3.9.9"
+  }
+}
